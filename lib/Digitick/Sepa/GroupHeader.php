@@ -46,6 +46,13 @@ class GroupHeader
      */
     protected $initiatingPartyId;
 
+	/**
+	 * The Issuer.
+	 *
+	 * @var string
+	 */
+	protected $issuer;
+
     /**
      * The Issuer.
      *
@@ -122,6 +129,22 @@ class GroupHeader
     {
         return $this->initiatingPartyId;
     }
+
+	/**
+	 * @return string
+	 */
+	public function getIssuer()
+	{
+		return $this->issuer;
+	}
+
+	/**
+	 * @param string $issuer
+	 */
+	public function setIssuer($issuer)
+	{
+		$this->issuer = $issuer;
+	}
 
     /**
      * @return string
