@@ -47,6 +47,13 @@ class GroupHeader
     protected $initiatingPartyId;
 
     /**
+     * The Issuer.
+     *
+     * @var string
+     */
+    protected $issuer;
+
+    /**
      * @var int
      */
     protected $numberOfTransactions = 0;
@@ -65,13 +72,6 @@ class GroupHeader
      * @var \DateTime
      */
     protected $creationDateTime;
-
-    /**
-     * Should the bank book multiple transaction as a batch
-     *
-     * @var int
-     */
-    protected $batchBooking = null;
 
     /**
      * @param $messageIdentification
@@ -124,6 +124,22 @@ class GroupHeader
     }
 
     /**
+     * @return string
+     */
+    public function getIssuer()
+    {
+        return $this->issuer;
+    }
+
+    /**
+     * @param string $issuer
+     */
+    public function setIssuer($issuer)
+    {
+        $this->issuer = $issuer;
+    }
+
+    /**
      * @param string $initiatingPartyName
      */
     public function setInitiatingPartyName($initiatingPartyName)
@@ -153,22 +169,6 @@ class GroupHeader
     public function getIsTest()
     {
         return $this->isTest;
-    }
-    
-    /**
-     * @param boolean $batchBooking
-     */
-    public function setBatchBooking($batchBooking)
-    {
-        $this->batchBooking = $batchBooking;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getBatchBooking()
-    {
-        return $this->batchBooking;
     }
 
     /**
