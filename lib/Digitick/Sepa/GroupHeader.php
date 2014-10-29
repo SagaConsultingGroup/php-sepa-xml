@@ -54,13 +54,6 @@ class GroupHeader
 	protected $issuer;
 
     /**
-     * The Issuer.
-     *
-     * @var string
-     */
-    protected $issuer;
-
-    /**
      * @var int
      */
     protected $numberOfTransactions = 0;
@@ -145,22 +138,6 @@ class GroupHeader
 	{
 		$this->issuer = $issuer;
 	}
-
-    /**
-     * @return string
-     */
-    public function getIssuer()
-    {
-        return $this->issuer;
-    }
-
-    /**
-     * @param string $issuer
-     */
-    public function setIssuer($issuer)
-    {
-        $this->issuer = $issuer;
-    }
 
     /**
      * @param string $initiatingPartyName
